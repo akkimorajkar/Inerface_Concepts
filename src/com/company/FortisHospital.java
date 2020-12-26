@@ -1,6 +1,6 @@
 package com.company;
 
-public class FortisHospital implements UKMedical,USMedical,IndianMedical {
+public class FortisHospital extends Hospital_Trust implements UKMedical,USMedical,IndianMedical {
 
 
     @Override
@@ -79,4 +79,30 @@ public class FortisHospital implements UKMedical,USMedical,IndianMedical {
 
 
     }
+
+    @Override
+    public void covid19Test() {
+
+        // This method is from WHO interface which is extended not implemented by USMedical Inerface
+
+        System.out.println("This method is implemented fro WHO interface which is inturn extended by USMedical Interface");
+
+
+    }
+
+    @Override
+    public void pathologyTest(){
+
+        System.out.println("We have Overriden the services of Hospital Trust for Pathology Services ");
+
+    }
+    @Override
+    public void admin(){
+
+
+        System.out.println("this is Overriden admins method from Interface USMedical");
+    }
+
+
+
 }

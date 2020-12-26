@@ -5,6 +5,7 @@ public class TestHospital {
     public static void main (String[] args){
 
         FortisHospital fh = new FortisHospital();
+       System .out.println(USMedical.minimumFee);
         fh.cancerServices();
         fh.cardioServices();
         fh.cosmeticServices();
@@ -14,6 +15,9 @@ public class TestHospital {
         fh.pediatricServices();
         fh.physioServie();
         fh.polioServices();
+        fh.medicalKits(); // This is inherited method from Hospital Trust Class
+        fh.pathologyTest(); // This is Overriden method from Parent Class i.e. Hospital trust
+        USMedical.medicalDisplays(); // This is the static method of USMedical Interface which can be called directly by the Interface name
 
         // below two methods can only be called by reference of the class in which they are present & not by any other ref
         //Since they ae unique to the class
